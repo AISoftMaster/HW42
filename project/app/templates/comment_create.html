@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<h1>Calculation</h1>
+<form action="/calculate/" method="post">
+    {% csrf_token %}
+    <label>Number 1:</label><br/>
+    <input type="number" name="num1"/><br/>
+    <label>Number 2:</label><br/>
+    <input type="number" name="num2"/><br/>
+    <label>Author:</label><br/>
+    <select name="action" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br/>
+    <input type="submit" value="Send"/>
+    <h3>{{result}}</h3>
+</form>
+</body>
+</html>
